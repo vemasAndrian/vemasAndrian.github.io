@@ -1,216 +1,511 @@
-:root{
-    --primery: linear-gradient(90deg, #0026FF 10%, #001799 );
-    --font: #9D6704;
+:root {
+  --primery: linear-gradient(90deg, #0026ff 10%, #001799);
+  --font: #9d6704;
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    outline: none;
-    border: none;
-    text-decoration: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
 }
 
-html{
-    scroll-behavior: smooth;
+html {
+  scroll-behavior: smooth;
 }
 
-body{
-    font-family: 'Poppins', sans-serif;
-    min-height: 2000px;
+body {
+  font-family: "Poppins", sans-serif;
+  /* min-height: 000px; */
 }
 
 /* navbar */
 
-.navbar{
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-    padding: 1.4rem 7%;
-    background-color: #ffff;
-    border-bottom: 0.1rem solid #b3acac;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 9999;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: #ffff;
+  border-bottom: 0.1rem solid #b3acac;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
 }
 
-.navbar-logo{
-    width: 6%;
+.navbar .menu-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
 }
 
+.navbar-logo {
+  width: 6%;
+}
 
 .navbar .navbar-nav a,
-.navbar .navbar-n a{
-    color: #0b0b0b;
-    display: inline-block;
-    margin: 0 0.5rem;
-    font-size: 1rem;
-}
-
-.navbar-n {
-    display: flex;
-    align-items: center;
+.navbar .navbar-n a {
+  color: #0b0b0b;
+  display: inline-block;
+  margin: 0 0.5rem;
+  font-size: 1.2rem;
 }
 
 .navbar .navbar-nav a::after,
-.navbar .navbar-n .masuk::after{
-    content: '';
-    display: block;
-    padding-bottom: 0.3rem ;
-    border-bottom: 0.2rem solid #0b0b0b;
-    transform: scaleX(0);
-    transition: 0.2s linear;
+.navbar .navbar-n .masuk::after {
+  content: "";
+  display: block;
+  border-bottom: 0.2rem solid #0b0b0b;
+  transform: scaleX(0);
+  transition: 0.2s linear;
 }
 
 .navbar .navbar-nav a:hover::after,
-.navbar .navbar-n .masuk:hover::after{
-    transform: scaleX(0.5);
+.navbar .navbar-n .masuk:hover::after {
+  transform: scaleX(0.5);
 }
 
-.navbar .navbar-n span{
-    color: #0b0b0b;
-    display: inline-block;
-    font-size: 1rem;
-    margin:0 0.5rem;
-    border: 0.1rem solid #0b0b0b;
-    padding: 0.2rem;
-    padding-left: 0.8rem;
-    padding-right: 0.8rem;
-}
-
-.navbar .navbar-extra a{
-    color: #0b0b0b;
-    margin: 0rem 2rem -1rem ;
-}
-
-
-#humburger-menu{
-    display: none;
-}
-
-
-/* hero */
-.hero{
-    min-height: 100vh;
+.menu-container .navbar-n {
     display: flex;
     align-items: center;
-    /* margin-bottom: 20rem; */
-    background-image: url('img/Group\ 1\ \(1\).jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    position: relative;
 }
 
-.hero::after{
-    content: '';
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 30%;
-    bottom: -10;
+.navbar .navbar-n .daftar {
+    border: .1rem solid black;
+    border-radius: 5px;
+    padding: .3rem 1rem;
+ }
+
+.navbar .navbar-extra a {
+  color: #0b0b0b;
+  margin: 0rem 2rem -1rem;
 }
 
-.hero .content{
-    padding: 1.4rem 11%;
-    max-width: 80rem;
-    color: #fff;
+#humburger-menu {
+  display: none;
 }
 
-.hero .content h5{
-    font-size: 1.4rem;
-    font-weight: 300;
+/* hero */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  /* margin-bottom: 20rem; */
+  background-image: url("img/Group\ 1\ \(1\).jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 30%;
+}
+
+.hero .content {
+  padding: 1.4rem 11%;
+  max-width: 80rem;
+  color: #fff;
+}
+
+.hero .content h2 {
+  font-size: 3rem;
+}
+
+.hero .content span {
+  font-style: italic;
+  font-weight: 200;
+}
+
+.hero .content h4 {
+  font-size: 1.9rem;
+  font-weight: 300;
+}
+
+.hero .content .cta {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 0.7rem 1.3rem;
+  font-size: 1.3rem;
+  color: #1976d2;
+  background-color: #fff;
+  border-radius: 0.8rem;
+  box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+/* fasilitas */
+.fasilitas {
+  max-width: 80rem;
+  margin: 10rem auto;
+}
+
+.fasilitas .tempat {
+  text-align: center;
+  margin-bottom: 5rem;
+  font-size: 2rem;
+}
+
+.fasilitas .tempat::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.3rem;
+  border-bottom: 0.2rem solid #0b0b0b;
+  width: 5.5rem;
+  margin: 0 auto;
+}
+
+.fasilitas .fasilitas-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: center;
+}
+
+.fasilitas .fasilitas-content {
+  width: 22rem;
+  display: flex;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 15px 2px rgba(138, 134, 138, 0.55);
+  -moz-box-shadow: 0px 0px 15px 2px rgba(138, 134, 138, 0.55);
+  box-shadow: 0px 0px 15px 2px rgba(138, 134, 138, 0.55);
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.fasilitas .fasilitas-content.kamar img {
+  width: 7rem;
+  margin-bottom: 2rem;
+  align-self: center;
+}
+
+.fasilitas .fasilitas-content.kamar p {
+  text-align: justify;
+}
+
+.fasilitas .fasilitas-content.kamar h1 {
+  margin-bottom: 1rem;
+}
+
+/* tentang */
+.tentang .tentang-h1 {
+  text-align: center;
+  margin-bottom: 5rem;
+  font-size: 2rem;
+}
+
+.tentang .tentang-h1::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.3rem;
+  border-bottom: 0.2rem solid #0b0b0b;
+  width: 10rem;
+  margin: 0 auto;
+}
+
+.tentang .tentang-container {
+  display: flex;
+  max-width: 80rem;
+  justify-content: center;
+  margin: 0 auto;
+  text-align: justify;
+  gap: 3rem;
+}
+
+.tentang .tentang-container img {
+  width: 40rem;
+}
+
+.tentang .tentang-container .tentang-p{
+  flex-wrap: wrap;
+}
+
+.tentang .tentang-container .tentang-p p{
+  /* gap: 2rem; */
+  margin-bottom: 1rem;
+}
+
+/* lokasi */
+.lokasi {
+  margin-bottom: 5rem;
+}
+
+.lokasi .lok {
+  text-align: center;
+  margin-top: 10rem;
+  margin-bottom: 5rem;
+  font-size: 2rem;
+}
+
+.lokasi .lok::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.3rem;
+  border-bottom: 0.2rem solid #0b0b0b;
+  width: 4rem;
+  margin: 0 auto;
+}
+
+.lokasi .lokasi-container {
+  justify-content: center;
+  text-align: center;
+}
+
+.lokasi .lokasi-container p {
+  display: flex;
+  justify-content: center;
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+}
+
+.lokasi .lokasi-container .map {
+  width: 70rem;
+  height: 30rem;
+  justify-content: center;
+}
+
+/* footer */
+footer {
+  background-color: #d9d9d9;
+}
+
+.footer-container {
+  margin-inline: auto;
+  max-width: 80rem;
+  text-align: center;
+  padding-block: 5rem;
+}
+
+.footer-container .socials {
+  margin-bottom: 3rem;
+}
+
+.footer-container .socials a {
+  color: #080808;
+  margin: 1rem;
+}
+
+.footer-container .socials i {
+  display: inline-block;
+}
+
+.footer-container .paragraf p {
+  margin-bottom: 1rem;
+  color: #878787;
+}
+
+footer .credit {
+  font-size: 0.8rem;
+}
+
+footer .credit p {
+  color: #878787;
+}
+
+footer .credit a {
+  color: #878787;
+  font-weight: 900;
 }
 
 
-.hero .content h2{
-    font-size: 3rem;
+
+/* bagian menu */
+.menu{
+  margin-top: 8rem;
+  margin-left: 2rem;
+  padding: 1.4rem 7%;
 }
 
-.hero .content span{
-    font-style: italic;
-    font-weight: 200;
+.menu .menu-n{
+  display: flex;
+  align-items: center;
 }
 
-.hero .content h4{
-    font-size: 1.9rem;
-    font-weight: 300;
+.menu .h1-menu{
+  font-size: 1.8rem;
+  /* border: 1px solid black; */
 }
 
-
-.hero .content .cta{
-     margin-top: 1rem;
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    color: #1976D2;
-    background-color: #fff;
-    border-radius: 0.8rem;
-    box-shadow: 1px 1px 3px rgba(1,1,3,0.5);
+.menu .i-h1{
+  color: black;
+    margin-right:  1rem;
+    padding-top: 0.5rem  ;
 }
 
-
-.fasilitas{
-    max-width: 80rem;
-    margin: 10rem auto;
-    
+.menu .row{
+  display: flex;
+  margin: 5rem 10rem;
+  gap: 2rem;
 }
 
-.fasilitas .tempat{
-    text-align: center;
-    margin-bottom: 5rem;
-    
+.menu .row .menu-card{
+  display: flex;
+  border-radius: 10px;
+  -webkit-box-shadow: -1px 7px 14px 0px rgba(166,161,166,1);
+  -moz-box-shadow: -1px 7px 14px 0px rgba(166,161,166,1);
+  box-shadow: -1px 7px 14px 0px rgba(166,161,166,1);
 }
 
-.fasilitas .tempat::after{
-    content: '';
-    display: block;
-    padding-bottom: 0.3rem ;
-    border-bottom: 0.2rem solid #0b0b0b;
-    width: 6.2rem;
-    margin: 0 auto;
+.menu .row .menu-card img{
+  width: 20rem;
+  padding: 2rem 3rem 0.5rem 3rem;
 }
 
-.fasilitas .fasilitas-container{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 3rem;
-    justify-content: center;
+.menu .row .menu-card h2{
+  color: black;
+  font-size: 1.2rem;
+  padding: 1rem;
 }
 
-.fasilitas .fasilitas-content{
-    width: 22rem;
-    display: flex;
-    /* border: 1px solid black; */
-    border-radius: 10px;
-    -webkit-box-shadow: 0px 0px 15px 2px rgba(138,134,138,0.55);
-    -moz-box-shadow: 0px 0px 15px 2px rgba(138,134,138,0.55);
-    box-shadow: 0px 0px 15px 2px rgba(138,134,138,0.55);;
-    flex-direction: column;
-    padding: 2rem ;
+.menu .row .menu-card p{
+  color:#000000;
+  padding: 1rem;
+  margin-top: -1.5rem;
+  font-size: .8rem;
 }
 
-.fasilitas .fasilitas-content.kamar img{
-    width: 10rem;
-    margin-bottom: 2rem;
-    /* margin-left: 2rem; */
-    align-self: center;
-}
-
-.fasilitas .fasilitas-content.kamar p{
-    text-align: justify;
-}
-
-.fasilitas .fasilitas-content.kamar h1{
-    margin-bottom: 1rem;
+.menu .row .menu-card .h1-card{
+  color: #000000;
+  padding: 1rem;
+  font-size: 1.5rem;
+  padding-bottom: 3rem;
 }
 
 
+/* details */
+.details{
+  padding: 1.4rem 7%;
+  margin-top: 8rem;
+  margin-left: 2rem;
+}
 
 
+.details .details-container {
+  -webkit-box-shadow: -1px 7px 14px 0px rgba(166,161,166,1);
+  -moz-box-shadow: -1px 7px 14px 0px rgba(166,161,166,1);
+  box-shadow: -1px 7px 14px 0px rgba(166,161,166,1);
+  padding: 2rem;
+  border-radius: 10px;
+}
 
+.details .details-container .hh{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.details-container .hh .h1-details {
+  font-size: 1.8rem;
+}
+.details-container .hh .i-details{
+  color: black;
+  margin-right:  1rem;
+}
+
+/* Slideshow container */
+.details .slideshow-container {
+  max-width: 750px;
+  position: relative;
+  margin: 0 auto 2rem auto;
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+.details .details-container .p-p{
+  text-align: justify;
+  margin-bottom: 0.5rem;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* details footer */
+.details .details-container .detail-footer{
+  display: flex;
+}
+
+.details .details-container .detail-footer .price {
+  margin-inline: 0.3rem;
+  margin-block: 2rem;
+  border: 1px solid black;
+  border-radius: 0.7rem;
+  padding: 0.6rem;
+}
+
+.details .details-container .detail-footer .price:hover{
+  background-color: #000000;
+  color: #fff;
+}
+
+.details .details-container .detail-footer .price::after{
+  background-color: #000000;
+  color: #fff;
+}
+
+.details .details-container .detail-footer .pesan{
+  margin-block: 2rem;
+  margin-left: 4rem;
+  background-color:#0026ff;
+  padding: 0.6rem 1.5rem;
+  border-radius: 0.7rem;
+}
+
+.details .details-container .detail-footer .pesan .pesan-1, 
+.pesan-nan .pesan-1{
+  color: #fff;
+  border-bottom: 0.1rem solid #fff;
+}
+
+
+.details .details-container .detail-footer .pesan .pesan-1:hover, 
+.pesan-nan .pesan-1:hover{
+  content: "";
+  color: #000000;
+  border-bottom: 0.1rem solid #000000;
+}
+
+.details .details-container .detail-footer .pesan-nan{
+  margin-block: 2rem;
+  margin-left: 62.5rem;
+  background-color:#0026ff;
+  padding: 0.6rem 1.5rem;
+  border-radius: 0.7rem;
+}
 
 
 
@@ -219,83 +514,126 @@ body{
 /*media queries*/
 
 /*laptop*/
-@media (max-width: 1366px ){ 
-     html{
-        font-size: 75%;
-    }
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
 }
 
-
 /*tablet*/
-@media screen and (max-width: 758px){
-    html{
-        font-size: 62.5%;
-    }
+@media screen and (max-width: 758px) {
+  html {
+    font-size: 62.5%;
+  }
 
-    .navbar-logo{
-        width: 10%;
-    }
+  .navbar-logo {
+    width: 10%;
+  }
 
-    #humburger-menu{
+  #humburger-menu {
     display: inline-block;
-    }
+  }
 
-    .navbar .navbar-nav{
-        position: absolute;
-        top: 100%;
-        right: -100%;
-        background-color: #fff;
-        width: 20rem;
-        height: 100vh;
-    }
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #fff;
+    width: 20rem;
+    height: 100vh;
+  }
+
+  .navbar .navbar-n {
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .navbar .navbar-nav a {
+    color: #0b0b0b;
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+  }
+
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.2);
+  }
+
+  .hero .content h5 {
+    font-size: 1rem;
+  }
+
+  .hero .content h2 {
+    font-size: 2rem;
+  }
+
+  .hero .content h4 {
+    font-size: 1.25rem;
+  }
+
+  .hero .content .cta {
+    font-size: 1rem;
+    border-radius: 0.8rem;
+  }
+
+  .fasilitas .tempat {
+    font-size: 2rem;
+  }
+
+  .tentang .tentang-container {
+    flex-wrap: wrap;
+    margin: 0 5rem;
+  }
+
+  .tentang .tentang-container img {
+    width: 100%;
+  }
+
+  .lokasi .lokasi-container {
+    margin: 0 5rem;
+    flex-wrap: wrap;
+  }
+
+  .lokasi .lokasi-container .map {
+    width: 34rem;
+  }
+
+  .menu{
+    margin-left: 2rem;
+    margin-top: 6rem;
+  }
+  
+  .menu h1{
+    font-size: 1.5rem;
+  }
+
+  .menu .row{
+    flex-wrap: wrap;
+    margin: 5rem 7rem;
+  }
+
+  .details .details-container .detail-footer .price{
+    font-size: 0.5rem;
+    /* padding-right: 1rem; */
     
-    .navbar .navbar-n{
-       display: flex;
-    }
+  }
 
-    .navbar .navbar-nav.active{
-        right: 0;
-    }
+  .details .details-container .detail-footer .pesan {
+    margin-left: 1rem;
+  }
 
-    .navbar .navbar-nav a{
-        color: #0b0b0b;
-        display: block;
-        margin: 1.5rem;
-        padding: 0.5rem;
-        font-size: 1.5rem;
-    } 
-
-    .navbar .navbar-nav a::after{
-        transform-origin: 0 0;
-    }
-
-    .navbar .navbar-nav a:hover::after{
-       transform: scaleX(0.2);
-    }
-
-    .hero .content h5{
-        font-size: 1rem;
-    }
+  .details .details-container .detail-footer .pesan-nan{
+    margin-left: 20rem;
+  }
 
 
-    .hero .content h2{
-        font-size: 2rem;
-    }
-
-    .hero .content h4{
-        font-size: 1.25rem;
-    }
-
-    .hero .content .cta{
-        font-size: 1rem;
-        border-radius: 0.8rem;
-    }
-
-
-    .fasilitas .tempat{
-        font-size: 2rem;
-    }
-
-    
-   
 }
